@@ -90,7 +90,7 @@ end
 
 //Empty and Full conditions
 assign empty = (rd_pointer_g == wr_pointer_g_s2);
-assign full = (wr_pointer_g[address_size-1] != rd_pointer_g_s2[address_size-1] && wr_pointer_g[address_size-2] != rd_pointer_g_s2[address_size-2] && wr_pointer_g[address_size-3] != rd_pointer_g_s2[address_size-3]);
+  assign full = (wr_pointer_g[address_size-1] != rd_pointer_g_s2[address_size-1] && wr_pointer_g[address_size-2] == rd_pointer_g_s2[address_size-2] && wr_pointer_g[address_size-3] == rd_pointer_g_s2[address_size-3]);
 
 //Overflow and Underflow conditions
 
